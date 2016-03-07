@@ -9,11 +9,9 @@
     <ul>
       <li v-for="chat in chats">
         <span>{{ chat.text }}</span>
-
       </li>
     </ul>
     <input v-model="newChat" v-on:keyup.enter="addChat">
-
   </div>
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
