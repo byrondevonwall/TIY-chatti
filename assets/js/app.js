@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 $(function(){
    'use strict';
-
-
 
 
 new Vue({
   el: '.bodywrap',
   data: {
     newChat: '',
-    chats: [
-
-    ]
+    chats: []
   },
   methods: {
     addChat: function () {
@@ -23,4 +18,4 @@ new Vue({
     }
   }
 });
-}) //end of line
+}) //end of app
