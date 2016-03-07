@@ -13,17 +13,23 @@ new Vue({
     addChat: function () {
       var text = this.newChat.trim()
       if (text) {
-        this.chats.push({ text: text })
-        this.newChat = ''
+        this.chats.push({ text: text });
+        this.newChat = '';
+        switch (text) {
+           case '@temp':
+           this.chats.push({text: check});
+
+              break;
+           default: text;
+
+        }
       }
    }, //end addChat
    removeChat: function(index){
-      this.chats.splice(index,1)
+      this.chats.splice(index,1);
    }
-
 
 } // end of Methods
 }); //end of new Vue
-
 
 }) //end of line
