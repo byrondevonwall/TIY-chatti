@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<head>
+  <title>chatti</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+  <link href="./assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="bodywrap">
+    <ul>
+      <li v-for="chat in chats">
+        <span>{{ chat.text }}</span>
+
+      </li>
+    </ul>
+    <input v-model="newChat" v-on:keyup.enter="addChat">
+
+  </div>
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/vue/dist/vue.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
