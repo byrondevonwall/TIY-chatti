@@ -2,3 +2,5 @@
 //chop off the @
 //do the math
 //return num operator num (et al) = done
+
+var calc = 'this is an integer';

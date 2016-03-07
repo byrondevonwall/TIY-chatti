@@ -1,7 +1,6 @@
 $(function(){
    'use strict';
 
-
 new Vue({
   el: '.bodywrap',
   data: {
@@ -10,26 +9,32 @@ new Vue({
   },
   methods: {
     addChat: function () {
-      var text = this.newChat.trim()
+    var  entered = this.newChat;
+    var textArr = entered.split(' ');
+    // console.log(textArr);
+    var text = textArr.splice(0,1).join()
+    console.log(text)
+    console.log(textArr)
       if (text) {
-        this.chats.push({ text: text });
-        this.newChat = '';
-        switch (text) {
-           case '@temp':
-           this.chats.push({text: check});
-
-              break;
-           default: text;
-
+        switch(text){
+          case '@temp':
+            this.chats.push({ text: check });
+            this.newChat = '';
+            break;
+            default:
+            this.chats.push({ text: text });
+            this.newChat = '';
+            break;
+          }
         }
       }
-   }, //end addChat
-   removeChat: function(index){
-      this.chats.splice(index,1);
-   }
+    }
+ //end addChat
+  //  removeChat: function(index){
+  //     this.chats.splice(index,1);
+  //  }
 
-} // end of Methods
+// end of Methods
 }); //end of new Vue
 
 }) //end of line
->>>>>>> 5cab6d89064fbe21e42b77ebd3a330b880dea0c6
