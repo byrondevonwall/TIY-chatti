@@ -6,7 +6,6 @@ new Vue({
   el: '.bodywrap',
   data: {
     newChat: '',
-
     chats: []
   },
   methods: {
@@ -16,14 +15,7 @@ new Vue({
         this.chats.push({ text: text })
         this.newChat = ''
       }
-   }, //end addChat
-   removeChat: function(index){
-      this.chats.splice(index,1)
-   }
-
-
-} // end of Methods
-}); //end of new Vue
-
-
-}) //end of line
+    }
+  }
+});
+}) //end of app
