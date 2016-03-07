@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(function(){
    'use strict';
 
@@ -11,7 +10,7 @@ new Vue({
     newChat: '',
     chats: [
 
-    ]
+   ]
   },
   methods: {
     addChat: function () {
@@ -20,7 +19,14 @@ new Vue({
         this.chats.push({ text: text })
         this.newChat = ''
       }
-    }
-  }
-});
+   }, //end addChat
+   removeChat: function(index){
+      this.chats.splice(index,1)
+   }
+
+
+} // end of Methods
+}); //end of new Vue
+
+
 }) //end of line
