@@ -2,15 +2,12 @@ $(function(){
    'use strict';
 
 
-
-
 new Vue({
   el: '.bodywrap',
   data: {
     newChat: '',
-    chats: [
 
-   ]
+    chats: []
   },
   methods: {
     addChat: function () {
