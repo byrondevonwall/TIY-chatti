@@ -1,0 +1,23 @@
+{
+  "name": "TIY-chatti",
+  "homepage": "https://github.com/byrondevonwall/TIY-chatti",
+  "authors": [
+    "Byron Wall <byrondevonwall@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.5.0",
+    "jquery": "^2.2.1",
+    "vue": "^1.0.17"
+  }
+}
