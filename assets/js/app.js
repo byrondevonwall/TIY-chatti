@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+$(function(){
+   'use strict';
+
+
+
+
 new Vue({
   el: '.bodywrap',
   data: {
@@ -16,3 +23,4 @@ new Vue({
     }
   }
 });
+}) //end of line
