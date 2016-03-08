@@ -1,9 +1,11 @@
 
-var commands =
+var commands = [
   "Available commands include:",
    "@help",
    "@temp",
-   "@gif<br>@picture"
+   "@gif",
+   "@picture",
+]
 var textArr = []
 var entered
 $(function(){
