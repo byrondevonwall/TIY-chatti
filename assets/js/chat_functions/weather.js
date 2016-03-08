@@ -14,7 +14,6 @@ method: 'GET',
 dataType : "json",
 success : function(json) {
   temp = JSON.stringify(json.current_observation.temp_f);
-  jsonpcallback(temp);
 }
 });
 };
