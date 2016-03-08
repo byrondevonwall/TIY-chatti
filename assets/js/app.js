@@ -15,14 +15,14 @@ var commandDescription = [
    "@picture followed by a keyword will return an amazing picture that will astound you"
 ]
 
-var textArr = []
-var entered
+var textArr = [];
+var entered;
 var city;
 var state;
 var temp;
+var weather;
 $(function(){
    'use strict';
-
 new Vue({
   el: '.bodywrap',
   data: {
@@ -34,20 +34,7 @@ new Vue({
     addChat: function () {
     entered = this.newChat;
     textArr = entered.split(' ');
-    // console.log(textArr);
     var text = textArr.splice(0,1).join()
-    // console.log(text)
-    // console.log(textArr)
-
-// Weather API Call!
-    // var city = textArr[0];
-    // var state = textArr[1];
-    // var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
-    //    json.current_observation.temp_f;
-    // });
-    // console.log(weather);
-
-
       if (text) {
          switch(text){
           case '@temp':
@@ -62,7 +49,7 @@ new Vue({
             };
             break;
             default:
-            this.chats.push({ text: text });
+            this.chats.push({ text: entered });
             this.newChat = '';
             break;
          };//end of switch statement
