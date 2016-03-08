@@ -1,31 +1,20 @@
-//define the city and state variables, so we can insert them into our JSON call.
 
-//look for @
+var check = 'you are talking to the weather';
 
-var check = 'rabble';
 
-function test(){
-console.log(cityArr);
-console.log(textArr);
+function weather(callback){
+  city = textArr[0];
+  state = textArr[1];
+  var blah;
+// console.log(textArr);
+// console.log(city);
+// console.log(state);
+$.ajax({
+url : 'http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json',
+method: 'GET',
+dataType : "json",
+success : function(json) {
+  temp = JSON.stringify(json.current_observation.temp_f);
 }
-// var cityArr = textArr;
-var city = textArr[0];
-var state = textArr[1];
-var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
-   json.current_observation.temp_f;
 });
-
-// var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
-//    json.current_observation.temp_f;
-// });
-
-
-
-
-
-// ***********warning! I have deleted the script tag for weather in the HTML!!
-
-
-// var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
-//    json.current_observation.temp_f;
-// }); //end of weather var
+};

@@ -9,7 +9,7 @@
     <ul>
       <li v-for="chat in chats">
         <span class="chat-return">{{ chat.text }}</span>
-        <button v-on:click="removeChat($index)">X</button>
+        <!-- <button v-on:click="removeChat($index)">X</button> -->
       </li>
       <li id="example">
          <my-component></my-component>
@@ -20,8 +20,8 @@
   </div>
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="./bower_components/vue/dist/vue.js"></script>
   <script src="./assets/js/chat_functions/weather.js"></script>
+  <script src="./bower_components/vue/dist/vue.js"></script>
   <script src="./assets/js/app.js"></script>
   <script src = "assets/js/chat_functions/calc.js"></script>
 
