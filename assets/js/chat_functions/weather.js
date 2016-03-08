@@ -3,7 +3,10 @@
 //look for @
 
 var check = 'rabble';
-
+function test(){
+console.log(cityArr);
+console.log(textArr);
+}
 var cityArr = textArr
 var city = textArr[0];
 var state = textArr[1];
@@ -11,10 +14,7 @@ var state = textArr[1];
 //    json.current_observation.temp_f;
 // });
 
-function test(){
-console.log(cityArr);
-console.log(textArr);
-}
+
 
 
 

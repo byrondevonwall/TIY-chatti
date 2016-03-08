@@ -1,12 +1,11 @@
 
-var commands = [
+var commands =
+  "Available commands include:",
    "@help",
    "@temp",
-   "@gif",
-   "@picture",
-]
+   "@gif<br>@picture"
 var textArr = []
-
+var entered
 $(function(){
    'use strict';
 
@@ -19,7 +18,7 @@ new Vue({
   },
   methods: {
     addChat: function () {
-    var  entered = this.newChat;
+    entered = this.newChat;
     textArr = entered.split(' ');
     // console.log(textArr);
     var text = textArr.splice(0,1).join()
