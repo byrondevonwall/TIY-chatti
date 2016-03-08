@@ -1,5 +1,3 @@
-$(function(){
-   'use strict';
 
 var commands = [
    "@help",
@@ -7,28 +5,26 @@ var commands = [
    "@gif",
    "@picture",
 ]
+var textArr = []
 
+$(function(){
+   'use strict';
 
 new Vue({
   el: '.bodywrap',
   data: {
     newChat: '',
     chats: []
-    var commands = [
-       "@help",
-       "@temp",
-       "@gif",
-       "@picture",
-    ]
+
   },
   methods: {
     addChat: function () {
     var  entered = this.newChat;
-    var textArr = entered.split(' ');
+    textArr = entered.split(' ');
     // console.log(textArr);
     var text = textArr.splice(0,1).join()
-    console.log(text)
-    console.log(textArr)
+    // console.log(text)
+    // console.log(textArr)
       if (text) {
          switch(text){
           case '@temp':
@@ -56,11 +52,6 @@ new Vue({
 
         }
       })
-
- //end addChat
-
-
-
 }); //end of new Vue
 
  //end of line
