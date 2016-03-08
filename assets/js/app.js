@@ -1,5 +1,6 @@
 
-var commands = [
+var commands =
+  "Available commands include:",
    "@help",
    "@temp",
    "@gif",
@@ -12,8 +13,9 @@ var commandDescription = [
    "@gif followed by a keyword will return an amusing .gif for your entertainment.",
    "@picture followed by a keyword will return an amazing picture that will astound you"
 ]
-var textArr = []
 
+var textArr = []
+var entered
 $(function(){
    'use strict';
 
@@ -26,7 +28,7 @@ new Vue({
   },
   methods: {
     addChat: function () {
-    var  entered = this.newChat;
+    entered = this.newChat;
     textArr = entered.split(' ');
     // console.log(textArr);
     var text = textArr.splice(0,1).join()

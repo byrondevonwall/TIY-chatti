@@ -8,9 +8,8 @@
   <div class="bodywrap">
     <ul>
       <li v-for="chat in chats">
-        <span>{{ chat.text }}</span>
+        <span class="chat-return">{{ chat.text }}</span>
         <button v-on:click="removeChat($index)">X</button>
-
       </li>
     </ul>
     <input v-model="newChat" v-on:keyup.enter="addChat">
