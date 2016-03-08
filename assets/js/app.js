@@ -23,6 +23,7 @@ var city;
 var state;
 var temp;
 var weather;
+var gif;
 $(function(){
    'use strict';
 new Vue({
@@ -57,6 +58,13 @@ new Vue({
 
             break;
 
+            case '@gif':
+            console.log(textArr[0])
+            giphy();
+            this.chats.push({text: gif});
+            this.newChat = '';
+            break;
+
             default:
             this.chats.push({ text: entered });
             this.newChat = '';
@@ -74,7 +82,9 @@ new Vue({
 var myComponent = Vue.extend({
    template: '<p>component</p>'
 })
+
 Vue.component('my-component', myComponent)
+
 new Vue({
    el: '#example'
 })
