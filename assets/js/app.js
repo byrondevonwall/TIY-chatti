@@ -1,18 +1,20 @@
 
-var commands =
+var commands = [
   "Available commands include:",
    "@help",
    "@temp",
    "@gif",
    "@picture",
+   "@github"
 ];
 
 var commandDescription = [
    "@help brings these up. You know this, you just typed it in. A++",
    "@temp, followed by City and State, will return the current temperature of your location.",
    "@gif followed by a keyword will return an amusing .gif for your entertainment.",
-   "@picture followed by a keyword will return an amazing picture that will astound you"
-]
+   "@picture followed by a keyword will return an amazing picture that will astound you",
+   "@github followed by a username will return the person's email, name, and picture"
+];
 
 var textArr = []
 var entered
@@ -38,7 +40,7 @@ new Vue({
 // Weather API Call!
     var city = textArr[0];
     var state = textArr[1];
-    var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
+    var json = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
        json.current_observation.temp_f;
     });
     console.log(weather);
@@ -52,28 +54,37 @@ new Vue({
             this.newChat = '';
 
             break;
+
             case '@help':
             for(var i = 0; i <= commands.length - 1; i++){
                this.chats.push({text: commands[i]});
             };
             break;
+
+            case '@github':
+
+            break;
+
             default:
             this.chats.push({ text: text });
             this.newChat = '';
             break;
          };//end of switch statement
-      }
+      }// end of if statement
 
-
-
-         }
-       }, //end addChat
+   },
+        //end addChat
          removeChat: function(index){
             this.chats.splice(index,1);
          }
+      }
+      })//end of new Vue
+var myComponent = Vue.extend({
+   template: '<p>component</p>'
+})
+Vue.component('my-component', myComponent)
+new Vue({
+   el: '#example'
+})
 
-        }
-      })
-}); //end of new Vue
-
- //end of line
+});  //end of line

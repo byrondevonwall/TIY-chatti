@@ -11,6 +11,9 @@
         <span class="chat-return">{{ chat.text }}</span>
         <button v-on:click="removeChat($index)">X</button>
       </li>
+      <li id="example">
+         <my-component></my-component>
+      </li>
     </ul>
     <input v-model="newChat" v-on:keyup.enter="addChat">
 
@@ -18,7 +21,7 @@
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
   <script src="./bower_components/vue/dist/vue.js"></script>
-<script src="./assets/js/chat_functions/weather.js"></script>
+  <script src="./assets/js/chat_functions/weather.js"></script>
   <script src="./assets/js/app.js"></script>
   <script src = "assets/js/chat_functions/calc.js"></script>
 
