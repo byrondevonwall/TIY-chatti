@@ -5,9 +5,21 @@ var commands = [
    "@temp",
    "@gif",
    "@picture",
+
+];
+
+var commandDescription = [
+   "@help brings these up. You know this, you just typed it in. A++",
+   "@temp, followed by City and State, will return the current temperature of your location.",
+   "@gif followed by a keyword will return an amusing .gif for your entertainment.",
+   "@picture followed by a keyword will return an amazing picture that will astound you"
 ]
+
 var textArr = []
 var entered
+var city;
+var state;
+var temp;
 $(function(){
    'use strict';
 
@@ -26,12 +38,23 @@ new Vue({
     var text = textArr.splice(0,1).join()
     // console.log(text)
     // console.log(textArr)
+
+// Weather API Call!
+    // var city = textArr[0];
+    // var state = textArr[1];
+    // var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
+    //    json.current_observation.temp_f;
+    // });
+    // console.log(weather);
+
+
       if (text) {
          switch(text){
           case '@temp':
-          test();
-            this.chats.push({ text: check });
+          weather();
+            this.chats.push({ text: "The weather in "+ city +" "+ state +" is "+ temp +" degrees" });
             this.newChat = '';
+
             break;
             case '@help':
             for(var i = 0; i <= commands.length - 1; i++){
@@ -43,6 +66,8 @@ new Vue({
             this.newChat = '';
             break;
          };//end of switch statement
+      }
+
 
 
          }
@@ -51,8 +76,8 @@ new Vue({
             this.chats.splice(index,1);
          }
 
-        }
-      })
-}); //end of new Vue
+       })
+     });
+// }); //end of new Vue
 
  //end of line

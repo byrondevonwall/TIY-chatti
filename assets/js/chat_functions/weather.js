@@ -3,15 +3,23 @@
 //look for @
 
 var check = 'you are talking to the weather';
-function test(){
 
+
+function weather(){
+  city = textArr[0];
+  state = textArr[1];
 console.log(textArr);
-}
-var cityArr = textArr
-console.log(cityArr);
-var city = textArr[0];
-var state = textArr[1];
 console.log(city);
+console.log(state);
+weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
+   console.log(json.current_observation.temp_f);
+});
+temp = JSON.toString(weather);
+};
+
+
+
+
 // var weather = $.getJSON('http://api.wunderground.com/api/c5a1b3a2f25bb11e/conditions/q/'+state+'/'+city+'.json', function(json){
 //    json.current_observation.temp_f;
 // });

@@ -5,8 +5,6 @@
   .bodywrap ul {
     margin: 0 30%; }
   .bodywrap .chat-return {
-    background-color: green;
-    color: whitesmoke;
-    display: block; }
+    display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */
