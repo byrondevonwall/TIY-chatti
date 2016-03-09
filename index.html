@@ -6,17 +6,11 @@
 </head>
 <body>
   <div class="bodywrap">
-    <ul>
-      <li v-for="chat in chats">
-
-        <!-- <button v-on:click="removeChat($index)">X</button> -->
-      </li>
-      <li id="example">
-         <!-- <my-component></my-component> -->
-      </li>
-    </ul>
-    <input class = "input" v-model="newChat" v-on:keyup.enter="addChat">
-    <button class = "submit">Chat!</button>
+    <div class="chatbody"></div>
+    <div class='inputwrap'>
+      <input type="text" placeholder="chat!" class="chatbox" >
+      <button class="submit">Chat!</button>
+    </div>
 
   </div>
 
@@ -24,7 +18,6 @@
   <script src='./assets/js/chat_functions/pokedex.js'></script>
   <script src="./assets/js/chat_functions/weather.js"></script>
   <script src="./assets/js/chat_functions/giphy.js"></script>
-  <script src="./bower_components/vue/dist/vue.js"></script>
   <script src="./assets/js/app.js"></script>
   <script src = "assets/js/chat_functions/calc.js"></script>
 

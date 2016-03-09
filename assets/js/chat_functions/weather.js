@@ -4,9 +4,9 @@ var check = 'you are talking to the weather';
 
 
 function weather(){
-  city = textArr[0];
-  state = textArr[1];
-  var blah;
+  city = textArr[1];
+  state = textArr[2];
+
 // console.log(textArr);
 // console.log(city);
 // console.log(state);
@@ -18,6 +18,7 @@ success : function(json) {
   temp = JSON.stringify(json.current_observation.temp_f);
 }
 });
+$('.chatbody').append('<div class="returnedinput">"The temperature in "'+city+'" "'+state+'" is "'+temp+'</div>')
 };
 
 //
