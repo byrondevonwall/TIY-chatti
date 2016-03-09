@@ -44,7 +44,8 @@ $('.chatbox').keyup(function(e) {
 
 
         case '@github':
-
+            getGithub();
+            applyUserText();
         break;
 
         case '@gif':
