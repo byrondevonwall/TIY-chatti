@@ -82,6 +82,11 @@ $(function(){
            applyUserText();
            doWhatMyHeartTellsMe();
        break;
+       case '@calc':
+            calc();
+            applyUserText();
+            doWhatMyHeartTellsMe();
+         break;
 
        case '@pokedex':
            pokedex();
