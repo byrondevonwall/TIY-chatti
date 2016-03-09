@@ -24,54 +24,50 @@ var temp;
 var weather;
 var gif;
 var shinypoke;
-
+var switchText
 
 $(function(){
    'use strict';
-var text;
-
-//need to get text, chop into an array, and find what position 0 is
-
-function getTextArray(){
-   textArr = $(".chatbox").val().split(" ");
-};
 
 $('.chatbox').keyup(function(e) {
     if(e.which === 13) {
-      console.log($(".chatbox").val());
-      getTextArray();
-      if (textArr) {
-         switch(textArr){
-          case textArr[0] = '@temp':
+      //this parses user input for switch statement
+      var userInput = $(".chatbox").val()
+      textArr = userInput.split(" ");
+      switchText = textArr.splice(0, 1);
+      switchText = switchText.join();
+      //this calls different functions for AI functionality
+      switch(switchText){
+        
+        case '@temp':
           weather();
-            break;
+          console.log('weather switch');
+        break;
 
-         case '@help':
+        case '@help':
             for(var i = 0; i <= commands.length - 1; i++){
-               this.chats.push({text: commands[i]});
+
             };
-            break;
+        break;
 
-            case '@github':
+        case '@github':
 
-            break;
+        break;
 
-            case '@gif':
+        case '@gif':
             console.log(textArr[0])
             giphy();
-            this.chats.push({text: gif});
-            this.newChat = '';
-            break;
+        break;
 
-            default:
-            this.chats.push({ text: entered });
-            this.newChat = '';
-            break;
-            };//end of switch statement
-         }// end of if statement
-   };
+        default:
+        $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
+        $('.chatbox').val("");
+        break;
+      };//end of switch statement
+    }// end of if statement
+   });
 });
-});//end use strict
+// });//end use strict
 //
 // $(".submit").on("click", function(){
 //    getTextArray();
