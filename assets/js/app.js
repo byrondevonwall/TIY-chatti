@@ -17,91 +17,106 @@ var switchText;
 $(function(){
    'use strict';
 
-$('.chatbox').keyup(function(e) {
-    if(e.which === 13) {
-      //this parses user input for switch statement
-      var userInput = $(".chatbox").val()
-      textArr = userInput.split(" ");
-      switchText = textArr.splice(0, 1);
-      switchText = switchText.join();
-//adds user input to the screen
-      function applyUserText (){
-         $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
-         $('.chatbox').val("");
-      };
-      //this calls different functions for AI functionality
-      switch(switchText){
 
-         case '@temp':
-            weather();
-            applyUserText();
-         break;
+   //hit enter in chatbox to start chat
+   $('.chatbox').keyup(function(e) {
+     if(e.which === 13) {
+      doTheThing();
+      }
+    });
 
-         case '@help':
-            getHelp();
-            applyUserText();
-         break;
+    //click on chat icon to start chat
+    $('.fa-comment').on("click", function(){
+      doTheThing();
+    });
 
+    //adds user input to the screen
+     function applyUserText (){
+       $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
+       $('.chatbox').val("");
+     };
 
-        case '@github':
-            getGithub();
-            applyUserText();
+   function doTheThing(){
+     var userInput = $(".chatbox").val()
+     textArr = userInput.split(" ");
+     switchText = textArr.splice(0, 1);
+     switchText = switchText.join();
+
+     //this calls different functions for AI functionality
+     switch(switchText){
+
+        case '@temp':
+           weather();
+           applyUserText();
         break;
 
-        case '@gif':
-            giphy();
-            applyUserText();
+        case '@help':
+           getHelp();
+           applyUserText();
         break;
 
-        case '@pokedex':
-            pokedex();
-            applyUserText();
-        default:
-            applyUserText();
-        break;
-      };//end of switch statement
-    }// end of if statement
-   });
-});
-// });//end use strict
+
+       case '@github':
+
+       break;
+
+       case '@gif':
+           giphy();
+           applyUserText();
+       break;
+
+       case '@pokedex':
+           pokedex();
+           applyUserText();
+       default:
+           applyUserText();
+       break;
+     };//end of switch statement
+   }//end of do the thing
+})// end of if statement
+
 //
-// $(".submit").on("click", function(){
-//    getTextArray();
-//    if (textArr) {
-//       switch(textArr){
-//        case textArr[0] = '@temp':
-//        weather();
+// <<<<<<< HEAD
+// =======
+// $('.chatbox').keyup(function(e) {
+//     if(e.which === 13) {
+//       //this parses user input for switch statement
+//       var userInput = $(".chatbox").val()
+//       textArr = userInput.split(" ");
+//       switchText = textArr.splice(0, 1);
+//       switchText = switchText.join();
+//
+//       //this calls different functions for AI functionality
+//       switch(switchText){
+//
+//          case '@temp':
+//             weather();
+//             applyUserText();
 //          break;
 //
-//       case '@help':
-//          for(var i = 0; i <= commands.length - 1; i++){
-//             this.chats.push({text: commands[i]});
-//          };
+//          case '@help':
+//             getHelp();
+//             applyUserText();
 //          break;
 //
-//          case '@github':
 //
-//          break;
+//         case '@github':
 //
-//          case '@gif':
-//          console.log(textArr[0])
-//          giphy();
-//          this.chats.push({text: gif});
-//          this.newChat = '';
-//          break;
+//         break;
 //
-//          default:
-//          this.chats.push({ text: entered });
-//          this.newChat = '';
-//          break;
-//          };//end of switch statement
-//       }// end of if statement
+//         case '@gif':
+//             giphy();
+//             applyUserText();
+//         break;
+//
+//         case '@pokedex':
+//             pokedex();
+//             applyUserText();
+//         default:
+//             applyUserText();
+//         break;
+//       };//end of switch statement
+//     }// end of if statement
+//    });
 // });
-//
-// function removeChat(index){
-//    this.chats.splice(index,1);
-//          }
-// }) //end use strict
-//
-//
-//  //end of line
+// >>>>>>> 031efe588d1f5dd30b85e8bf53cb53f7ad290a72

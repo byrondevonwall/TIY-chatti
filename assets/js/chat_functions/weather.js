@@ -16,7 +16,7 @@ method: 'GET',
 dataType : "json",
 success : function(json) {
   temp = JSON.stringify(json.current_observation.temp_f);
-  $('.chatbody').append('<div class="returnedinput">The temperature in '+city+' '+state+' is '+temp+'</div>');
+  $('.chatbody').append('<div class="returnedinput">The temperature in '+city+' '+state+' is '+temp+' degrees</div>');
 }
 });
 
