@@ -1,20 +1,6 @@
 
-var commands = [
-  "Available commands include:",
-   "@help",
-   "@temp",
-   "@gif",
-   "@picture",
-   "@pokedex"
 
-];
 
-var commandDescription = [
-   "@help brings these up. You know this, you just typed it in. A++",
-   "@temp, followed by City and State, will return the current temperature of your location.",
-   "@gif followed by a keyword will return an amusing .gif for your entertainment.",
-   "@picture followed by a keyword will return an amazing picture that will astound you"
-]
 
 var textArr = [];
 var entered;
@@ -47,9 +33,10 @@ $('.chatbox').keyup(function(e) {
             break;
 
          case '@help':
-            for(var i = 0; i <= commands.length - 1; i++){
-               this.chats.push({text: commands[i]});
-            };
+            getHelp();
+            // for(var i = 0; i <= commands.length - 1; i++){
+            //    this.chats.push({text: commands[i]});
+            // };
             break;
 
             case '@github':
