@@ -10,6 +10,7 @@ function pokedex(){
 
     $(".chatbody").append('<div class="returnedinput"><img src='+shinypoke+'></img><br><p>'+pokeType+'</p></div>');
     doWhatMyHeartTellsMe();
+
   }
 
   });

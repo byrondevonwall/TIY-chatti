@@ -22,6 +22,7 @@ function doWhatMyHeartTellsMe(){
 $(function(){
    'use strict';
 
+
    //hit enter in chatbox to start chat
    $('.chatbox').keyup(function(e) {
      if(e.which === 13) {
@@ -50,15 +51,19 @@ $(function(){
       };
 
       doWhatMyHeartTellsMe();
-
      //this calls different functions for AI functionality
      switch(switchText){
 
         case '@temp':
-           weather();
+           temp();
            applyUserText();
            doWhatMyHeartTellsMe();
         break;
+
+        case '@weather':
+            weather();
+            applyUserText();
+         break;
 
         case '@help':
            getHelp();
@@ -68,7 +73,8 @@ $(function(){
 
 
        case '@github':
-
+            getGithub();
+            applyUserText();
        break;
 
        case '@gif':
@@ -81,6 +87,7 @@ $(function(){
            pokedex();
            doWhatMyHeartTellsMe();
           //  applyUserText();
+        break;
        default:
            applyUserText();
            doWhatMyHeartTellsMe();
