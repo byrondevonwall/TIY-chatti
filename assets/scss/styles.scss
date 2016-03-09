@@ -31,22 +31,22 @@ body{
         input{
           margin: 0 0 0 1%;
           border-style: none;
-          width: 92%;
+          width: 88%;
           line-height: 2em;
           color: darken($chatgreen, 30%);
           font-size: 1.5em;
         }
         .fa-comment{
           font-size: 2.5em;
-          margin: 0 0 0 1%;
+          margin: 0 0 0 2%;
         }
       }
     .chatbody{
       background-color: $chatbg;
       overflow: scroll;
       position: absolute;
-      margin: 3.5% 0 0 0;
-      height: 82.2%;
+      margin: 4% 0 0 0;
+      height: 78.5%;
       width: 65%;
       // margin: 0 0 10% 0;
       .userinput{

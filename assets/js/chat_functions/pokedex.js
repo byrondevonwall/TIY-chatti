@@ -8,9 +8,8 @@ function pokedex(){
     shinypoke =  JSON.stringify(json.sprites.front_shiny);
     pokeType = JSON.stringify(json.types[0].type.name);
 
-    $(".chatbody").append('<div class="returnedinput"><img src='+shinypoke+'></img><br><p>'+pokeType+'</p></div>');
+    $(".chatbody").append('<div class="returnedinput"><p>'+pokeType+'</p><br><img src='+shinypoke+'></img></div>');
     doWhatMyHeartTellsMe();
-
   }
 
   });

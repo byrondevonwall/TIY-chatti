@@ -86,7 +86,7 @@ $(function(){
        case '@pokedex':
            pokedex();
            doWhatMyHeartTellsMe();
-          //  applyUserText();
+           applyUserText();
         break;
        default:
            applyUserText();
