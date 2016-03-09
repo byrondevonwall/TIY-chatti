@@ -2,7 +2,7 @@
 var check = 'you are talking to the weather';
 
 
-function weather(callback){
+function weather(){
   city = textArr[0];
   state = textArr[1];
   var blah;
