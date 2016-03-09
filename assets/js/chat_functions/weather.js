@@ -3,7 +3,7 @@ var check = 'you are talking to the weather';
 
 
 function weather(callback){
-  city = textArr[0];
+  city = textArr[0]; //check these array numbers
   state = textArr[1];
   var blah;
 // console.log(textArr);
@@ -18,3 +18,7 @@ success : function(json) {
 }
 });
 };
+
+//
+// this.chats.push({ text: "The weather in "+ city +" "+ state +" is "+ temp +" degrees" });
+// this.newChat = '';

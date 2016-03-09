@@ -26,67 +26,48 @@ var weather;
 var gif;
 $(function(){
    'use strict';
-new Vue({
-  el: '.bodywrap',
-  data: {
-    newChat: '',
-    chats: []
+var text;
 
-  },
-  methods: {
-    addChat: function () {
-    entered = this.newChat;
-    textArr = entered.split(' ');
-    var text = textArr.splice(0,1).join()
+//need to get text, chop into an array, and find what position 0 is
 
-      if (text) {
-         switch(text){
-          case '@temp':
-          weather();
-            this.chats.push({ text: "The weather in "+ city +" "+ state +" is "+ temp +" degrees" });
-            this.newChat = '';
+function getTextArray(){
+   textArr = $(".input").val().split(" ");
+};
 
-            break;
+$(".submit").on("click", function(){
+   getTextArray;
+   if (textArr) {
+      switch(textArr){
+       case textArr[0] = '@temp':
+       weather();
+         break;
 
-            case '@help':
-            for(var i = 0; i <= commands.length - 1; i++){
-               this.chats.push({text: commands[i]});
-            };
-            break;
+      case '@help':
+         for(var i = 0; i <= commands.length - 1; i++){
+            this.chats.push({text: commands[i]});
+         };
+         break;
 
-            case '@github':
+         case '@github':
 
-            break;
+         break;
 
-            case '@gif':
-            console.log(textArr[0])
-            giphy();
-            this.chats.push({text: gif});
-            this.newChat = '';
-            break;
+         case '@gif':
+         console.log(textArr[0])
+         giphy();
+         this.chats.push({text: gif});
+         this.newChat = '';
+         break;
 
-            default:
-            this.chats.push({ text: entered });
-            this.newChat = '';
-            break;
+         default:
+         this.chats.push({ text: entered });
+         this.newChat = '';
+         break;
          };//end of switch statement
       }// end of if statement
+});
 
-   },
-        //end addChat
-         removeChat: function(index){
-            this.chats.splice(index,1);
+function removeChat(index){
+   this.chats.splice(index,1);
          }
-      }
-      })//end of new Vue
-var myComponent = Vue.extend({
-   template: '<p>component</p>'
-})
-
-Vue.component('my-component', myComponent)
-
-new Vue({
-   el: '#example'
-})
-
-});  //end of line
+}) //end use strict
