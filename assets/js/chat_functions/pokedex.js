@@ -5,7 +5,12 @@ function pokedex(){
   method: 'GET',
   dataType : "json",
   success : function(json) {
-    shinypoke =  '<img src="'+json.sprites.front_shiny+ '"alt="'+pokemon+'">';
+    shinypoke =  JSON.stringify(json.sprites.front_shiny);
+    pokeType = JSON.stringify(json.types[0].type.name);
+
+    $(".chatbody").append('<img src='+shinypoke+'></img><br><p>'+pokeType+'</p>');
   }
   });
+
   };
+  

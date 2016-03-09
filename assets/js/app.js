@@ -10,7 +10,9 @@ var temp;
 var weather;
 var gif;
 var shinypoke;
-var switchText
+var switchText;
+
+
 
 $(function(){
    'use strict';
@@ -22,20 +24,23 @@ $('.chatbox').keyup(function(e) {
       textArr = userInput.split(" ");
       switchText = textArr.splice(0, 1);
       switchText = switchText.join();
+//adds user input to the screen
+      function applyUserText (){
+         $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
+         $('.chatbox').val("");
+      };
       //this calls different functions for AI functionality
       switch(switchText){
 
-        case '@temp':
-          weather();
-          console.log('weather switch');
-        break;
+         case '@temp':
+            weather();
+            applyUserText();
+         break;
 
          case '@help':
             getHelp();
-            // for(var i = 0; i <= commands.length - 1; i++){
-            //    this.chats.push({text: commands[i]});
-            // };
-            break;
+            applyUserText();
+         break;
 
 
         case '@github':
@@ -43,13 +48,15 @@ $('.chatbox').keyup(function(e) {
         break;
 
         case '@gif':
-            console.log(textArr[0])
             giphy();
+            applyUserText();
         break;
 
+        case '@pokedex':
+            pokedex();
+            applyUserText();
         default:
-        $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
-        $('.chatbox').val("");
+            applyUserText();
         break;
       };//end of switch statement
     }// end of if statement
