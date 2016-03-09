@@ -30,11 +30,7 @@ $(function(){
       doTheThing();
     });
 
-    //adds user input to the screen
-     function applyUserText (){
-       $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
-       $('.chatbox').val("");
-     };
+
 
    function doTheThing(){
      var userInput = $(".chatbox").val()
@@ -42,13 +38,24 @@ $(function(){
      switchText = textArr.splice(0, 1);
      switchText = switchText.join();
 
+ //adds user input to the screen
+      function applyUserText (){
+        $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
+        $('.chatbox').val("");
+      };
+
      //this calls different functions for AI functionality
      switch(switchText){
 
         case '@temp':
-           weather();
+           temp();
            applyUserText();
         break;
+
+        case '@weather':
+            weather();
+            applyUserText();
+         break;
 
         case '@help':
            getHelp();
@@ -57,7 +64,8 @@ $(function(){
 
 
        case '@github':
-
+            getGithub();
+            applyUserText();
        break;
 
        case '@gif':
@@ -68,6 +76,7 @@ $(function(){
        case '@pokedex':
            pokedex();
            applyUserText();
+        break;
        default:
            applyUserText();
        break;

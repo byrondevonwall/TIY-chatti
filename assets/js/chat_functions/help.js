@@ -18,7 +18,7 @@ var commandDescription = [
 function getHelp(){
 
    for(var i = 0; i < commands.length; i++){
-      $(".chatbody").append("<div class = ''>"+commandDescription[i]+"</div>");
+      $(".chatbody").append("<div class = 'returnedinput'>"+commandDescription[i]+"</div>");
    }
 
 };

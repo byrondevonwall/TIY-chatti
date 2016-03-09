@@ -8,7 +8,7 @@ function giphy(){
       dataType: "json",
       success: function(json){
          gif = JSON.stringify(json.data.image_original_url);
-         $(".chatbody").append('<img src='+gif+'></img>');
+         $(".chatbody").append('<div class = "returnedinput"><img src='+gif+'></img></div>');
       }
    });
 };//end giphy function
