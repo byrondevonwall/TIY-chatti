@@ -14,47 +14,60 @@ var switchText
 
 $(function(){
    'use strict';
+   //hit enter in chatbox to start chat
+   $('.chatbox').keyup(function(e) {
+     if(e.which === 13) {
+      doTheThing();
+      }
+    });
 
-$('.chatbox').keyup(function(e) {
-    if(e.which === 13) {
-      //this parses user input for switch statement
-      var userInput = $(".chatbox").val()
-      textArr = userInput.split(" ");
-      switchText = textArr.splice(0, 1);
-      switchText = switchText.join();
-      //this calls different functions for AI functionality
-      switch(switchText){
+    //clcik on chat icon to start chat
+    $('.fa-comment').on("click", function(){
+      doTheThing();
+    })
 
-        case '@temp':
-          weather();
-          console.log('weather switch');
-        break;
+   function doTheThing(){
+     var userInput = $(".chatbox").val()
+     textArr = userInput.split(" ");
+     switchText = textArr.splice(0, 1);
+     switchText = switchText.join();
+     //this calls different functions for AI functionality
+     switch(switchText){
 
-         case '@help':
-            getHelp();
-            // for(var i = 0; i <= commands.length - 1; i++){
-            //    this.chats.push({text: commands[i]});
-            // };
-            break;
+       case '@temp':
+         $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
+         $('.chatbox').val("");
+         weather();
+         console.log('weather switch');
+
+       break;
+
+        case '@help':
+           getHelp();
+          //  for(var i = 0; i <= commands.length - 1; i++){
+          //     this.chats.push({text: commands[i]});
+          //  };
+           break;
 
 
-        case '@github':
+       case '@github':
 
-        break;
+       break;
 
-        case '@gif':
-            console.log(textArr[0])
-            giphy();
-        break;
+       case '@gif':
+           console.log(textArr[0])
+           giphy();
+       break;
 
-        default:
-        $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
-        $('.chatbox').val("");
-        break;
-      };//end of switch statement
-    }// end of if statement
-   });
-});
+       default:
+       $('.chatbody').append('<div class="userinput">'+userInput+'</div>');
+       $('.chatbox').val("");
+       break;
+     };//end of switch statement
+   }
+})// end of if statement
+
+
 // });//end use strict
 //
 // $(".submit").on("click", function(){

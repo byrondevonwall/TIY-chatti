@@ -1,13 +1,46 @@
-.bodywrap {
-  margin: 20% 20%; }
-  .bodywrap input {
-    margin: 0;
-    border-style: none; }
-  .bodywrap ul {
-    margin: 0 30%; }
-  .bodywrap .chat-return {
-    background-color: green;
-    color: whitesmoke;
-    display: inline-block; }
+body {
+  background: whitesmoke; }
+  body .bodywrap {
+    margin: 5% 20%; }
+    body .bodywrap .inputwrap {
+      position: absolute;
+      bottom: 0;
+      margin: 0 0 5% 0;
+      color: #71b4ae;
+      width: 100%; }
+      body .bodywrap .inputwrap input {
+        margin: 0;
+        border-style: none;
+        width: 60%;
+        line-height: 2em;
+        color: #427d78;
+        font-size: 1.5em; }
+      body .bodywrap .inputwrap .fa-comment {
+        font-size: 2.5em;
+        margin: 0 1.5%; }
+    body .bodywrap .userinput {
+      background-color: #92c6c1;
+      color: whitesmoke;
+      display: block;
+      float: right;
+      width: 40%;
+      margin: .5% 0 .5% 11%;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      line-height: 2em;
+      padding: 0 2%;
+      border-radius: .3em 0 .3em .3em;
+      font-size: 2em; }
+    body .bodywrap .returnedinput {
+      background-color: white;
+      color: slategrey;
+      display: block;
+      float: left;
+      width: 40%;
+      margin: .5% 11% .5% 0;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      line-height: 2em;
+      padding: 0 2%;
+      border-radius: 0 .3em  .3em .3em;
+      font-size: 2em; }
 
 /*# sourceMappingURL=styles.css.map */
