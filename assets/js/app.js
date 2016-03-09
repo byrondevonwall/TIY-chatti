@@ -5,7 +5,7 @@ var commands = [
    "@temp",
    "@gif",
    "@picture",
-   "@github"
+   "@pokedex"
 
 ];
 
@@ -13,9 +13,8 @@ var commandDescription = [
    "@help brings these up. You know this, you just typed it in. A++",
    "@temp, followed by City and State, will return the current temperature of your location.",
    "@gif followed by a keyword will return an amusing .gif for your entertainment.",
-   "@picture followed by a keyword will return an amazing picture that will astound you",
-   "@github followed by a username will return the person's email, name, and picture"
-];
+   "@picture followed by a keyword will return an amazing picture that will astound you"
+]
 
 var textArr = [];
 var entered;
@@ -24,6 +23,7 @@ var state;
 var temp;
 var weather;
 var gif;
+var shinypoke;
 $(function(){
    'use strict';
 var text;
@@ -71,3 +71,6 @@ function removeChat(index){
    this.chats.splice(index,1);
          }
 }) //end use strict
+
+
+ //end of line

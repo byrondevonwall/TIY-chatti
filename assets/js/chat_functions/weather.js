@@ -2,8 +2,9 @@
 var check = 'you are talking to the weather';
 
 
-function weather(callback){
-  city = textArr[0]; //check these array numbers
+
+function weather(){
+  city = textArr[0];
   state = textArr[1];
   var blah;
 // console.log(textArr);
