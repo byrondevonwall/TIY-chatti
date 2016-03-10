@@ -11,16 +11,23 @@ body{
     .chatheader{
       font-family: 'lato', sans-serif;
       color:  darken($chatgreen, 25%);
-      font-size: 4em;
+      font-size: 3em;
       font-weight: 300;
       position: absolute;
       background-color: $chatbg;
       width: 65%;
-      height: 80px;
+      height:58px;
       text-align: center;
       top: 0;
       display: block;
-      }
+      z-index: 1;
+      @media screen and (max-width: 700px){
+            height: 45px;
+         }
+      // @media screen and (max-width: 300px){
+      //         //  width: 70%;
+      //     }
+    }
     .inputwrap{
       position: absolute;
       bottom: 0;
@@ -35,10 +42,19 @@ body{
           line-height: 2em;
           color: darken($chatgreen, 30%);
           font-size: 1.5em;
+          @media screen and (max-width: 900px){
+                width: 80%;
+             }
+          @media screen and (max-width: 300px){
+                   width: 70%;
+              }
         }
         .fa-comment{
           font-size: 2.5em;
           margin: 0 0 0 2%;
+          @media screen and (max-width: 900px){
+                font-size: 2em;
+             }
         }
       }
     .chatbody{
@@ -49,6 +65,12 @@ body{
       height: 78.5%;
       width: 65%;
       // margin: 0 0 10% 0;
+      @media screen and (max-width: 900px){
+            height: 85%;
+         }
+      @media screen and (max-width: 400px){
+               height: 90%;
+          }
       .userinput{
         background-color: $chatgreen;
         color: lighten($chatbg, 10%);
@@ -100,15 +122,4 @@ body{
       }
     }
   }
-}
-@media screen and (max-width: 900px){
-   .bodywrap{
-      margin: 0 5% 2% 5%;
-   }
-}
-
-@media screen and (max-width: 300px){
-   .bodywrap{
-      margin: 0 0 1% 0;
-   }
 }

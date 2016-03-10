@@ -1,6 +1,6 @@
 //look for @help
 var commands = [
-  "Chat commands include",
+
    "@help",
    "@temp",
    '@weather',
@@ -25,7 +25,7 @@ var commands = [
 ];
 
 function getHelp(){
-      $(".chatbody").append("<div class = 'returnedhelp'>"+commands.join(', ')+"</div>");
+      $(".chatbody").append("<div class = 'returnedhelp'>Chat commands include: <br>"+commands.join(', ')+"</div>");
 
       $(".chatbody").append("<div class = 'returnedhelp'>@morehelp + command (i.e. @morehelp @temp) - describe each command</div>");
 doWhatMyHeartTellsMe();
