@@ -69,3 +69,143 @@ body {
           width: 90%; }
 
 /*# sourceMappingURL=styles.css.map */
+
+@media screen and (min-width: 900px){
+   body .bodywrap {
+     background: white;
+     margin: 0 7.5% 5% 7.5%;
+     padding: 2% 0 0 0; }
+     body .bodywrap .chatheader {
+       font-family: 'lato', sans-serif;
+       color: #4a8e88;
+       font-size: 4em;
+       font-weight: 300;
+       position: absolute;
+       background-color: white;
+       width: 90%;
+       height: 80px;
+       text-align: center;
+       top: 0;
+       display: block; }
+     body .bodywrap .inputwrap {
+       position: absolute;
+       bottom: 0;
+       padding: 0 0 1% 0;
+       color: #71b4ae;
+       background-color: white;
+       width: 90%; }
+       body .bodywrap .inputwrap input {
+         margin: 0 0 0 1%;
+         border-style: none;
+         width: 80%;
+         line-height: 2em;
+         color: #427d78;
+         font-size: 1.5em; }
+       body .bodywrap .inputwrap .fa-comment {
+         font-size: 2.5em;
+         margin: 0 0 0 2%; }
+     body .bodywrap .chatbody {
+       background-color: white;
+       overflow: scroll;
+       position: absolute;
+       margin: 4% 0 0 0;
+       height: 78.5%;
+       width: 90%; }
+       body .bodywrap .chatbody .userinput {
+         background-color: #92c6c1;
+         color: white;
+         display: block;
+         float: right;
+         width: 80%;
+         margin: .5% 2% 1% 11%;
+         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+         line-height: 1.2em;
+         padding: 2% 2%;
+         border-radius: .3em 0 .3em .3em;
+         font-size: 2em; }
+       body .bodywrap .chatbody .returnedinput {
+         background-color: white;
+         color: slategrey;
+         display: block;
+         float: left;
+         width: 80%;
+         margin: .5% 11% 2% 2%;
+         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+         line-height: 1.2em;
+         padding: 2% 2%;
+         border-radius: 0 .3em  .3em .3em;
+         font-size: 2em; }
+         body .bodywrap .chatbody .returnedinput .returnedimage {
+           height: 90%;
+           width: 90%; }
+        }
+
+@media screen and (max-width: 400px){
+   body .bodywrap {
+     background: white;
+     margin: 0 5% 2% 5%;
+     padding: 2% 0 0 0; }
+     body .bodywrap .chatheader {
+       font-family: 'lato', sans-serif;
+       color: #4a8e88;
+       font-size: 4em;
+       font-weight: 300;
+       position: absolute;
+       background-color: white;
+       width: 100%;
+       height: 80px;
+       text-align: center;
+       top: 0;
+       display: block; }
+     body .bodywrap .inputwrap {
+       position: absolute;
+       bottom: 0;
+       padding: 0 0 1% 0;
+       color: #71b4ae;
+       background-color: white;
+       width: 100%; }
+       body .bodywrap .inputwrap input {
+         margin: 0 0 0 1%;
+         border-style: none;
+         width: 90%;
+         line-height: 2em;
+         color: #427d78;
+         font-size: 1.5em; }
+       body .bodywrap .inputwrap .fa-comment {
+         font-size: 2.5em;
+         margin: 0 0 0 2%; }
+     body .bodywrap .chatbody {
+       background-color: white;
+       overflow: scroll;
+       position: absolute;
+       margin: 4% 0 0 0;
+       height: 78.5%;
+       width: 90%; }
+       body .bodywrap .chatbody .userinput {
+         background-color: #92c6c1;
+         color: white;
+         display: block;
+         float: right;
+         width: 100%;
+         margin: .5% 2% 1% 11%;
+         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+         line-height: 1.2em;
+         padding: 2% 2%;
+         border-radius: .3em 0 .3em .3em;
+         font-size: 2em; }
+       body .bodywrap .chatbody .returnedinput {
+         background-color: white;
+         color: slategrey;
+         display: block;
+         float: left;
+         width: 100%;
+         margin: .5% 11% 2% 2%;
+         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+         line-height: 1.2em;
+         padding: 2% 2%;
+         border-radius: 0 .3em  .3em .3em;
+         font-size: 2em; }
+         body .bodywrap .chatbody .returnedinput .returnedimage {
+           height: 90%;
+           width: 90%; }
+}
