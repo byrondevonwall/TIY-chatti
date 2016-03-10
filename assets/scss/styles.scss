@@ -61,6 +61,8 @@ body{
         padding: 2% 2%;
         border-radius: .3em 0 .3em .3em;
         font-size: 2em;
+        font-family: 'lato', sans-serif;
+        font-weight: 300;
       }
       .returnedinput{
         background-color: $chatbg;
@@ -74,10 +76,27 @@ body{
         padding: 2% 2%;
         border-radius:  0 .3em  .3em .3em;
         font-size: 2em;
+        font-family: 'lato', sans-serif;
+        font-weight: 300;
         .returnedimage{
           height: 90%;
           width: 90%;
         }
+      }
+      .returnedhelp{
+        background-color: $chatbg;
+        color: slategrey;
+        display: block;
+        float: left;
+        width: 90%;
+        margin: .5% 11% 2% 2%;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        line-height: 1.2em;
+        padding: 2% 2%;
+        border-radius:  0 .3em  .3em .3em;
+        font-size: 2em;
+        font-family: 'lato', sans-serif;
+        font-weight: 300;
       }
     }
   }
