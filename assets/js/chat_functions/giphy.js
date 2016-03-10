@@ -8,7 +8,8 @@ function giphy(){
       dataType: "json",
       success: function(json){
          gif = JSON.stringify(json.data.image_original_url);
-         $(".chatbody").append('<div class = "returnedinput"><img src='+gif+'></img></div>');
+         $(".chatbody").append('<div class = "returnedinput"><img class="returnedimage" src='+gif+'></img></div>');
+         doWhatMyHeartTellsMe();
       }
    });
 };//end giphy function

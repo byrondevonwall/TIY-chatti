@@ -9,7 +9,8 @@ $.ajax({
    success: function(json){
       name = JSON.stringify(json.name);
       profilePic = JSON.stringify(json.avatar_url);
-      $(".chatbody").append('<div class = "returnedinput"><img src = '+profilePic+'></img><p>'+name+'</p></div>');
+      $(".chatbody").append('<div class = "returnedinput"><img class="returnedimage" src = '+profilePic+'></img><p>'+name+'</p></div>');
+      doWhatMyHeartTellsMe();
    }
 });
 };

@@ -64,5 +64,8 @@ body {
         padding: 2% 2%;
         border-radius: 0 .3em  .3em .3em;
         font-size: 2em; }
+        body .bodywrap .chatbody .returnedinput .returnedimage {
+          height: 90%;
+          width: 90%; }
 
 /*# sourceMappingURL=styles.css.map */

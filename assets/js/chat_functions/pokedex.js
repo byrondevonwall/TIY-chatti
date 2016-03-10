@@ -8,7 +8,7 @@ function pokedex(){
     shinypoke =  JSON.stringify(json.sprites.front_shiny);
     pokeType = JSON.stringify(json.types[0].type.name);
 
-    $(".chatbody").append('<div class="returnedinput"><p>'+pokeType+'</p><br><img src='+shinypoke+'></img></div>');
+    $(".chatbody").append('<div class="returnedinput"><img class="returnedimage" src='+shinypoke+'></img><p>'+pokeType+'</p></div>');
     doWhatMyHeartTellsMe();
   }
 

@@ -71,10 +71,16 @@ $(function(){
            doWhatMyHeartTellsMe();
         break;
 
+        case '@morehelp':
+          getMoreHelp();
+          applyUserText();
+          doWhatMyHeartTellsMe();
+        break;
 
        case '@github':
             getGithub();
             applyUserText();
+            doWhatMyHeartTellsMe();
        break;
 
        case '@gif':
@@ -82,6 +88,7 @@ $(function(){
            applyUserText();
            doWhatMyHeartTellsMe();
        break;
+
        case '@calc':
             calc();
             applyUserText();
@@ -93,6 +100,68 @@ $(function(){
            doWhatMyHeartTellsMe();
            applyUserText();
         break;
+
+        case '@fr':
+          french();
+          applyUserText();
+        break;
+
+        case '@ar':
+          arabic();
+          applyUserText();
+        break;
+
+        case '@cn':
+          simplified();
+          applyUserText();
+        break;
+
+        case '@hk':
+          traditional();
+          applyUserText();
+        break;
+
+        case '@hr':
+          croatian();
+          applyUserText();
+        break;
+
+        case '@et':
+          estonian();
+          applyUserText();
+        break;
+
+        case '@tl':
+          tagalog();
+          applyUserText();
+        break;
+
+        case '@hi':
+        hindi();
+        applyUserText();
+        break;
+
+        case '@is':
+        icelandic();
+        applyUserText();
+        break;
+
+        case '@th':
+        thai();
+        applyUserText();
+        break;
+
+        case '@tr':
+        turkish();
+        applyUserText();
+        break;
+
+        case '@vi':
+        vietnamese();
+        applyUserText();
+        break;
+
+
        default:
            applyUserText();
            doWhatMyHeartTellsMe();
